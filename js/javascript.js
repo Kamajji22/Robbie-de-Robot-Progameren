@@ -9,8 +9,6 @@ const stroomTekst = document.querySelector("#stroomPercentage")
 
 const robbie = document.querySelector("#robbie")
 
-const warning = document.querySelector("#warning")
-
 //lets
 let maxOlie = 100;
 let maxStroom = 100;
@@ -70,9 +68,6 @@ function robbieBang() {
     if (maxOlie < 25 || maxSchroef < 25 || maxStroom < 25) {
         robbie.src = "../images/robbieBang.gif"
         audioKortsluiting.play()
-        warning.addEventListener("fullscreenchange", function () {
-            warning.classList.toggle(".hideElement")
-        })
     }
     else {
         robbie.src = "../images/robbieBlij.png"
