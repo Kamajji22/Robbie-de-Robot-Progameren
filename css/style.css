@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/lab.png);
+    background-repeat: no-repeat;
+    background-color: rgb(109, 109, 249);
+}
+
+.container {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    align-items: center;
+    padding-right: 0px;
+    left: 89%;
+}
+
+/* knoppen rechts onder elkaar krijgen */
+
+.knop {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+#robbie {
+    position: absolute;
+    left: 35%;
+    top: 20%;
+}
+
+#stroomPercentage {
+    color: orangered;
+}
+
+#schroefPercentage {
+    color: rgb(24, 188, 24);
+}
+
+#oliePercentage {
+    color: rgb(0, 174, 255);
+}
+
+.percentage {
+    padding-top: 300px;
+}
