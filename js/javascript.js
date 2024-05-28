@@ -68,18 +68,18 @@ function voerStroom() {
 
 function robbieBang() {
     if (maxOlie < 25 || maxSchroef < 25 || maxStroom < 25) {
-        robbie.src = "../images/robbieBang.gif"
+        robbie.src = "images/robbieBang.gif"
         audioKortsluiting.play()
     }
     else {
-        robbie.src = "../images/robbieBlij.png"
+        robbie.src = "images/robbieBlij.png"
     }
 }
 
 function explosie() {
     if (maxStroom == 0 || maxSchroef == 0 || maxOlie == 0) {
         audioExplosie.play()
-        robbie.src = "../images/robbieDood.png"
+        robbie.src = "images/robbieDood.png"
         clearInterval(robbieBangInterval)
     } 
 }
