@@ -86,6 +86,7 @@ function robbieBang() {
     }
     else {
         robbie.src = "images/robbieBlij.png"
+        warning.style.display = "none"
     }
 }
 
@@ -94,6 +95,7 @@ function explosie() {
         audioExplosie.play()
         robbie.src = "images/robbieDood.png" //https://pixabay.com/nl/vectors/explosie-ontploffing-uitbarsting-147909/ boom cartoon tekening
         clearInterval(robbieBangInterval)
+        clearInterval(explosieInterval)
     } 
 }
 
@@ -110,4 +112,4 @@ setInterval(olieOmlaag, 1000)
 setInterval(schroefOmlaag, 1000) 
 setInterval(stroomOmlaag, 1000) 
 let robbieBangInterval = setInterval(robbieBang, 1000)
-setInterval(explosie, 1000)
+let explosieInterval = setInterval(explosie, 1000)
