@@ -79,7 +79,7 @@ function robbieBang() {
 function explosie() {
     if (maxStroom == 0 || maxSchroef == 0 || maxOlie == 0) {
         audioExplosie.play()
-        robbie.src = "/images/robbieDood.png"
+        robbie.src = "../images/robbieDood.png"
         clearInterval(robbieBangInterval)
     } 
 }
