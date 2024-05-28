@@ -68,11 +68,11 @@ function voerStroom() {
 
 function robbieBang() {
     if (maxOlie < 25 || maxSchroef < 25 || maxStroom < 25) {
-        robbie.src = "./images/robbieBang.gif"
+        robbie.src = "../images/robbieBang.gif"
         audioKortsluiting.play()
     }
     else {
-        robbie.src = "./images/robbieBlij.png"
+        robbie.src = "../images/robbieBlij.png"
     }
 }
 
