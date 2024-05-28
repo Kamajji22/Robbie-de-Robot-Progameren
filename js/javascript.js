@@ -1,26 +1,38 @@
 //constants
+//const knoppen
 const schroefKnop = document.querySelector("#schroefKnop");
 const stroomKnop = document.querySelector("#stroomKnop");
 const olieKnop = document.querySelector("#olieKnop");
 
+//const % tekst
 const olieTekst = document.querySelector("#oliePercentage");
 const schroefTekst = document.querySelector("#schroefPercentage");
 const stroomTekst = document.querySelector("#stroomPercentage");
 
+//const robbie
 const robbie = document.querySelector("#robbie");
 
-//lets
+//constant ontploffingswarning
+const warning = document.getElementById("warning")
+
+//lets 
+//max lets
 let maxOlie = 100;
 let maxStroom = 100;
 let maxSchroef = 100;
 
-//audio
+//audio 
 let audioOlie = new Audio("sound/olie.wav") //https://freesound.org/people/sapphicrabbit/sounds/724223/ olie drinken soundeffect
 let audioSchroef = new Audio("sound/schroef.wav") //https://freesound.org/people/CallFlan/sounds/495094/ schroeven soundeffect
 let audioStroom = new Audio("sound/stroom.wav") //https://freesound.org/people/The-Sacha-Rush/sounds/657803/ stroom soundeffect
 let audioKortsluiting = new Audio("sound/kortsluiting.wav") //https://freesound.org/people/mad-monkey/sounds/66692/ kortsluiting soundeffect
 let audioExplosie = new Audio("sound/explosie.mp3") //https://freesound.org/people/Timbre/sounds/711326/ explosie soundeffect
-let audioRobbiePraat = new Audio("sound/robbiePraat.mp3") 
+
+//robbie voiceclips
+let audioRobbieIkBen = new Audio("sound/robbieIkBen.mp3") 
+let audioRobbieOlie = new Audio('sound/robbieOlie.mp3')
+let audioRobbieSchroeven = new Audio("sound/robbieSchroeven.mp3")
+let audioRobbieWilNietOntploffen = new Audio("sound/robbieWilNietOntploffen")
 
 //functions
 function olieOmlaag() {
@@ -70,6 +82,7 @@ function robbieBang() {
     if (maxOlie < 25 || maxSchroef < 25 || maxStroom < 25) {
         robbie.src = "images/robbieBang.gif"
         audioKortsluiting.play()
+        warning.style.display = "block"
     }
     else {
         robbie.src = "images/robbieBlij.png"
