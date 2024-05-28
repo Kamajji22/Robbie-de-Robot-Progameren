@@ -34,10 +34,12 @@ body {
 
 #stroomPercentage {
     color: orangered;
+    margin-top: 25px;
 }
 
 #schroefPercentage {
     color: rgb(24, 188, 24);
+    margin-top: 25px;
 }
 
 #oliePercentage {
@@ -45,9 +47,10 @@ body {
 }
 
 .percentage {
-    margin-top: 300px;
+    margin-top: 230px;
     background-color: white;
-    margin-right: 1450px;
+    margin-right: 1360px;
+    font-size: 3em;
 }
 
 #warning {
