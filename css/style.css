@@ -8,6 +8,8 @@ body {
     background-image: url(../images/lab.png); /*https://www.freepik.com/free-vector/cartoon-empty-laboratory-room_13248592.htm#query=laboratory%20background&position=1&from_view=keyword&track=ais_user&uuid=64d42f0e-24bb-414b-b5cb-2fe59809e77d*/
     background-repeat: no-repeat;
     background-color: rgb(109, 109, 249);
+    background-size: cover;
+    background-position: top;
 }
 
 .container {
@@ -23,13 +25,16 @@ body {
 .knop {
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 23vh;
+    background-color: rgb(183, 140, 240);
+    padding-right: 5.3vh;
+    padding-bottom: 3vh;
 }
 
 #robbie {
     position: absolute;
-    left: 35%;
-    top: 20%;
+    left: 75vh;
+    top: 35vh;
 }
 
 #stroomPercentage {
@@ -47,9 +52,9 @@ body {
 }
 
 .percentage {
-    margin-top: 230px;
+    margin-top: 35vh;
     background-color: white;
-    margin-right: 1360px;
+    margin-right: 175vh;
     font-size: 3em;
     border: 5px color red;
 }
@@ -57,9 +62,9 @@ body {
 #warning {
     color: red;
     position: absolute;
-    left: 35%;
+    left: 20%;
     top: 10%;
-    font-size:xx-large;
+    font-size: 8vh;
     font: bolder;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     display: none;
