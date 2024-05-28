@@ -51,6 +51,7 @@ body {
     background-color: white;
     margin-right: 1360px;
     font-size: 3em;
+    border: 5px color red;
 }
 
 #warning {
