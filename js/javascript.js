@@ -92,13 +92,13 @@ function robbieBang() {
 function explosie() {
     if (maxStroom == 0 || maxSchroef == 0 || maxOlie == 0) {
         audioExplosie.play()
-        robbie.src = "images/robbieDood.png"
+        robbie.src = "images/robbieDood.png" //https://pixabay.com/nl/vectors/explosie-ontploffing-uitbarsting-147909/ boom cartoon tekening
         clearInterval(robbieBangInterval)
     } 
 }
 
 function robbiePraat() {
-    audioRobbiePraat.play()
+    audioRobbieIkBen.play()
 }
 
 olieKnop.addEventListener("click" , voerOlie)
