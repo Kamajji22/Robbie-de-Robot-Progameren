@@ -13,7 +13,9 @@ const stroomTekst = document.querySelector("#stroomPercentage");
 const robbie = document.querySelector("#robbie");
 
 //constant ontploffingswarning
-const warning = document.getElementById("warning")
+const warning = document.getElementById("warning");
+const gameOver = document.getElementById("gameOver");
+const gameOverTekst = document.getElementById("gameOverTekst");
 
 //lets 
 //max lets
@@ -96,6 +98,9 @@ function explosie() {
         robbie.src = "images/robbieDood.png" //https://pixabay.com/nl/vectors/explosie-ontploffing-uitbarsting-147909/ boom cartoon tekening
         clearInterval(robbieBangInterval)
         clearInterval(explosieInterval)
+        warning.style.display = "none"
+        gameOver.style.display = "block"
+        gameOverTekst.style.display = "block"
     } 
 }
 
