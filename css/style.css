@@ -98,4 +98,7 @@ body {
 
 #speelOpnieuw {
     display: none;
+    left: 88vh;
+    top: 50vh;
+    position: absolute;
 }
