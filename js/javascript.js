@@ -17,11 +17,15 @@ const warning = document.getElementById("warning");
 const gameOver = document.getElementById("gameOver");
 const gameOverTekst = document.getElementById("gameOverTekst");
 
+const speelOpnieuw = document.getElementById("speelOpnieuw")
+
 //lets 
 //max lets
 let maxOlie = 100;
 let maxStroom = 100;
 let maxSchroef = 100;
+
+let randomGetal;
 
 //audio 
 let audioOlie = new Audio("sound/olie.wav") //https://freesound.org/people/sapphicrabbit/sounds/724223/ olie drinken soundeffect
@@ -31,10 +35,8 @@ let audioKortsluiting = new Audio("sound/kortsluiting.wav") //https://freesound.
 let audioExplosie = new Audio("sound/explosie.mp3") //https://freesound.org/people/Timbre/sounds/711326/ explosie soundeffect
 
 //robbie voiceclips
-let audioRobbieIkBen = new Audio("sound/robbieIkBen.mp3") 
-let audioRobbieOlie = new Audio('sound/robbieOlie.mp3')
-let audioRobbieSchroeven = new Audio("sound/robbieSchroeven.mp3")
-let audioRobbieWilNietOntploffen = new Audio("sound/robbieWilNietOntploffen")
+let voicePlaylist = ["sound/robbieIkBen.mp3", 'sound/robbieOlie.mp3', "sound/robbieSchroeven.mp3", "sound/robbieWilNietOntploffen.mp3"]
+let voiceClip = new Audio()
 
 //functions
 function olieOmlaag() {
@@ -92,6 +94,7 @@ function robbieBang() {
     }
 }
 
+//explosie (game over)
 function explosie() {
     if (maxStroom == 0 || maxSchroef == 0 || maxOlie == 0) {
         audioExplosie.play()
@@ -101,20 +104,35 @@ function explosie() {
         warning.style.display = "none"
         gameOver.style.display = "block"
         gameOverTekst.style.display = "block"
+        speelOpnieuw.style.display = "block"
     } 
 }
 
+//robbie random praten (met hulp van diego)
 function robbiePraat() {
-    audioRobbieIkBen.play()
+}
+
+function playRandomRobbie() {
+    randomGetal = Math.floor(Math.random() * 4)
+    voiceClip.src = voicePlaylist[randomGetal]
+    voiceClip.play();
+    return randomGetal
+}
+
+//opnieuw spelen (met hulp van Diego)
+function playAgain () {
+    location.reload();
 }
 
 olieKnop.addEventListener("click" , voerOlie)
 schroefKnop.addEventListener("click" , voerSchroef)
 stroomKnop.addEventListener("click" , voerStroom)
-robbie.addEventListener("click", robbiePraat)
+robbie.addEventListener("click", playRandomRobbie)
 
 setInterval(olieOmlaag, 1000) 
 setInterval(schroefOmlaag, 1000) 
 setInterval(stroomOmlaag, 1000) 
 let robbieBangInterval = setInterval(robbieBang, 1000)
 let explosieInterval = setInterval(explosie, 1000)
+
+speelOpnieuw.addEventListener("click", playAgain)
