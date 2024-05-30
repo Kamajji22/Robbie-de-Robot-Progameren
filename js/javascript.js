@@ -42,43 +42,43 @@ let voiceClip = new Audio()
 function olieOmlaag() {
     if (maxOlie > 0) {
         maxOlie -= 1;
-    } 
+    }
     olieTekst.textContent = "Olie " + maxOlie + "%"
 }
 
 function voerOlie() {
     if (maxOlie < 95) {
         maxOlie += 5;
-    } 
+    }
     audioOlie.play()
 }
 
 function schroefOmlaag() {
     if (maxSchroef > 0) {
         maxSchroef -= 1;
-    } 
+    }
     schroefTekst.textContent = "Schroef " + maxSchroef + "%"
 }
 
 function voerSchroef() {
     if (maxSchroef < 95) {
         maxSchroef += 5;
-    } 
+    }
     audioSchroef.play()
 }
 
 function stroomOmlaag() {
     if (maxStroom > 0) {
         maxStroom -= 1;
-        
-    } 
+
+    }
     stroomTekst.textContent = "Stroom " + maxStroom + "%"
 }
 
 function voerStroom() {
     if (maxStroom < 95) {
         maxStroom += 5;
-    } 
+    }
     audioStroom.play()
 }
 
@@ -105,7 +105,7 @@ function explosie() {
         gameOver.style.display = "block"
         gameOverTekst.style.display = "block"
         speelOpnieuw.style.display = "block"
-    } 
+    }
 }
 
 //robbie random praten (met hulp van diego)
@@ -120,18 +120,18 @@ function playRandomRobbie() {
 }
 
 //opnieuw spelen (met hulp van Diego)
-function playAgain () {
+function playAgain() {
     location.reload();
 }
 
-olieKnop.addEventListener("click" , voerOlie)
-schroefKnop.addEventListener("click" , voerSchroef)
-stroomKnop.addEventListener("click" , voerStroom)
+olieKnop.addEventListener("click", voerOlie)
+schroefKnop.addEventListener("click", voerSchroef)
+stroomKnop.addEventListener("click", voerStroom)
 robbie.addEventListener("click", playRandomRobbie)
 
-setInterval(olieOmlaag, 1000) 
-setInterval(schroefOmlaag, 1000) 
-setInterval(stroomOmlaag, 1000) 
+setInterval(olieOmlaag, 1000)
+setInterval(schroefOmlaag, 1000)
+setInterval(stroomOmlaag, 1000)
 let robbieBangInterval = setInterval(robbieBang, 1000)
 let explosieInterval = setInterval(explosie, 1000)
 
