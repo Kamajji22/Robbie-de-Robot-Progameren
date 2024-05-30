@@ -108,7 +108,7 @@ function explosie() {
     }
 }
 
-//robbie random praten (met hulp van diego)
+//robbie random praten (met hulp van Mariska)
 function robbiePraat() {
 }
 
