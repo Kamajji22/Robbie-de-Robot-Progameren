@@ -19,7 +19,7 @@ const gameOverTekst = document.getElementById("gameOverTekst");
 
 const speelOpnieuw = document.getElementById("speelOpnieuw");
 
-//audio
+//const audio, onderzocht met mijn groepje in de les)
 const audioOlie = new Audio("sound/olie.wav") //https://freesound.org/people/sapphicrabbit/sounds/724223/ olie drinken soundeffect
 const audioSchroef = new Audio("sound/schroef.wav") //https://freesound.org/people/CallFlan/sounds/495094/ schroeven soundeffect
 const audioStroom = new Audio("sound/stroom.wav") //https://freesound.org/people/The-Sacha-Rush/sounds/657803/ stroom soundeffect
@@ -38,8 +38,8 @@ let randomGetal;
 let voicePlaylist = ["sound/robbieIkBen.mp3", 'sound/robbieOlie.mp3', "sound/robbieSchroeven.mp3", "sound/robbieWilNietOntploffen.mp3"]
 let voiceClip = new Audio()
 
-let robbieBangInterval = setInterval(robbieBang, 1000)
-let explosieInterval = setInterval(explosie, 1000)
+let robbieBangInterval = setInterval(robbieBang, 1000);
+let explosieInterval = setInterval(explosie, 1000);
 
 //functions
 //olie omlaag laten gaan
