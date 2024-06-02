@@ -19,7 +19,7 @@ const gameOverTekst = document.getElementById("gameOverTekst");
 
 const speelOpnieuw = document.getElementById("speelOpnieuw");
 
-//const audio, onderzocht met mijn groepje in de les)
+//const audio, onderzocht met mijn groepje in de les
 const audioOlie = new Audio("sound/olie.wav") //https://freesound.org/people/sapphicrabbit/sounds/724223/ olie drinken soundeffect
 const audioSchroef = new Audio("sound/schroef.wav") //https://freesound.org/people/CallFlan/sounds/495094/ schroeven soundeffect
 const audioStroom = new Audio("sound/stroom.wav") //https://freesound.org/people/The-Sacha-Rush/sounds/657803/ stroom soundeffect
